@@ -11,17 +11,11 @@ const PORT = process.env.PORT || 3000;
 export const app = new Elysia();
 
 app
-  .use(securitySetup)
-  .use(docsSetup)
-  .use(logger())
-  .use(hooksSetup)
-  .get('/', () => 'Hello Bun.js!')
-  .group('/api', (app: Elysia) =>
-    app
-      .use(usersController)
-      .use(staticDataController)
-      // and other controllers
-  )
+  .group("a", (app) => 
+    app.get("works", () => {
+        return "ok"
+    }
+  ))
   .listen(PORT, () => {
     console.log(`🦊 Elysia is running at ${app.server?.hostname}:${PORT}`);
-  });
+  })
