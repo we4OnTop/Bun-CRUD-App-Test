@@ -1,6 +1,5 @@
 import { Elysia } from 'elysia';
 import { logger } from '@grotto/logysia';
-import './database/db.setup';
 import { securitySetup } from './startup/security'
 import { docsSetup } from './startup/docs';
 import { hooksSetup } from './startup/hooks';
