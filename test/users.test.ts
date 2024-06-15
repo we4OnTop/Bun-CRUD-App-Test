@@ -9,6 +9,6 @@ describe("Tests", () => {
 
     const response = await api.a.works.get();
 
-    expect(response.data).toBe("osk");
+    expect(response.data).toBe("ok");
   });
 });
